@@ -10,4 +10,6 @@ COPY webdav.conf /etc/nginx/conf.d/default.conf
 
 COPY entrypoint.sh /
 RUN chmod +x entrypoint.sh
+RUN ls /
+RUN ls /entrypoint.sh
 CMD /entrypoint.sh && nginx -g "daemon off;"
