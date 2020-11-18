@@ -1,8 +1,8 @@
 FROM arm64v8/alpine:3.7
 
-RUN add --no-cache nginx 
-RUN add --no-cache apache2-utils
-RUN add --no-cache nginx-extras
+RUN apk add --no-cache nginx 
+RUN apk add --no-cache apache2-utils
+RUN apk add --no-cache nginx-extras
 #RUN apt-get update && apt-get install -y nginx nginx-extras apache2-utils
 
 VOLUME /media
