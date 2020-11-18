@@ -5,21 +5,11 @@
 [![](https://badge.imagelayers.io/sashgorokhov/webdav:latest.svg)](https://imagelayers.io/?images=sashgorokhov/webdav:latest 'Get your own badge on imagelayers.io')
 
 # How to use this image
-
 ```console
-$ docker run --name webdav -p 80:80 -v /media:/media -d sashgorokhov/webdav
-```
-This will start a webdav server listening on the default port of 80.
-Then access it via `http://localhost:80` or `http://host:80` in a browser.
+$git clone 
+$docker build . -t linsz/webdav
+$docker run --name webdav -p 80:80 -v /media:/media -e USERNAME=webdav -e PASSWORD=webdav -d linsz/webdav
 
-This server will serve files located in your /media folder
-
-Image's supported volumes:
-- `/media` - served directory
-
-To restrict access to only authorized users, you can define two environment variables: `USERNAME` and `PASSWORD`
-```console
-$ docker run --name webdav -p 80:80 -v /media:/media -e USERNAME=webdav -e PASSWORD=webdav -d sashgorokhov/webdav
 ```
 
 # Supported Docker versions
